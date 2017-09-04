@@ -1,4 +1,4 @@
-#Laravel Mix Starter Project
+# Laravel Mix Starter Project
 
 ## What's inside?
 
