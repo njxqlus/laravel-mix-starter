@@ -11,9 +11,19 @@ let mix = require('laravel-mix');
  |
  */
  
-mix.setPublicPath('public')
+mix.setPublicPath('public');
 mix.js('assets/js/app.js', 'public/js');
 mix.less('assets/less/app.less', 'public/css');
+
+//Copy Bootstrap
+mix.copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/vendor/bootstrap/bootstrap.min.css');
+mix.copy('node_modules/bootstrap/dist/js/bootstrap.min.js', 'public/vendor/bootstrap/bootstrap.min.js');
+
+//Copy Popper.js
+mix.copy('node_modules/popper.js/dist/umd/popper.min.js', 'public/vendor/popper/popper.min.js');
+
+//Copy jQuery
+mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/vendor/jquery/jquery.min.js');
 
 // Full API
 // mix.js(src, output);
