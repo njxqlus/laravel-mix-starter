@@ -11,9 +11,9 @@ let mix = require('laravel-mix');
  |
  */
  
-mix.setPublicPath('public');
-mix.js('assets/js/app.js', 'public/js');
-mix.less('assets/less/app.less', 'public/css');
+mix.setPublicPath(path.normalize('public'));
+mix.js('assets/js/app.js', 'js');
+mix.less('assets/less/app.less', 'css');
 
 //Copy Bootstrap
 mix.copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/vendor/bootstrap/bootstrap.min.css');
