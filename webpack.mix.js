@@ -10,20 +10,8 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
- 
-mix.setPublicPath(path.normalize('public'));
-mix.js('assets/js/app.js', 'js');
-mix.less('assets/less/app.less', 'css');
-
-//Copy Bootstrap
-mix.copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/vendor/bootstrap/bootstrap.min.css');
-mix.copy('node_modules/bootstrap/dist/js/bootstrap.min.js', 'public/vendor/bootstrap/bootstrap.min.js');
-
-//Copy Popper.js
-mix.copy('node_modules/popper.js/dist/umd/popper.min.js', 'public/vendor/popper/popper.min.js');
-
-//Copy jQuery
-mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/vendor/jquery/jquery.min.js');
+mix.js('assets/js/app.js', 'public/js');
+mix.sass('assets/sass/app.scss', 'public/css');
 
 // Full API
 // mix.js(src, output);
